@@ -1,4 +1,4 @@
-# Smart-Failure-Detection-SFD-using-Generative-AI
+# Power System Predictive Maintenance System
 The system  designed to detect and report on different  factors that can impact the engine including temperature, humidity, noise levels, and vibrations.
 
 Here is a step-by-step guide on how to build this project:
