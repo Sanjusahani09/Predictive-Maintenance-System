@@ -1,33 +1,62 @@
-# Power System Predictive Maintenance System
-The system  designed to detect and report on different  factors that can impact the engine including temperature, humidity, noise levels, and vibrations.
+# ⚡ Power System Predictive Maintenance System
 
-Here is a step-by-step guide on how to build this project:
+A **Predictive Maintenance System** designed to monitor and analyze critical engine parameters such as **temperature**, **humidity**, **noise levels**, and **vibrations** using Arduino and AI-based analysis. This helps in early detection of anomalies and improves overall system reliability.
 
-Materials:
+---
 
-Arduino board (e.g., Arduino Uno)
-Sound sensor module
-Vibration sensor module
-DHT11 humidity and temperature sensor module
-Breadboard
-Jumper wires
-USB cable
-Computer with Arduino IDE installed
+## 🛠️ Components Used
 
-Step 1: Connect the sound sensor module
-Connect the sound sensor module to the Arduino board using jumper wires. The sound sensor has three pins: VCC, GND, and AOUT. Connect the VCC pin to the 5V pin on the Arduino board, the GND pin to the GND pin on the board, and the AOUT pin to an analog input pin on the board (e.g., A0).
+- Arduino board (e.g., Arduino Uno)
+- Sound sensor module
+- Vibration sensor module
+- DHT11 temperature and humidity sensor
+- Breadboard
+- Jumper wires
+- USB cable
+- Computer with Arduino IDE installed
 
-Step 2: Connect the vibration sensor module
-Connect the vibration sensor module to the Arduino board using jumper wires. The vibration sensor has three pins: VCC, GND, and SIG. Connect the VCC pin to the 5V pin on the Arduino board, the GND pin to the GND pin on the board, and the SIG pin to an analog input pin on the board (e.g., A1).
+---
 
-Step 3: Connect the DHT11 humidity and temperature sensor module
-Connect the DHT11 humidity and temperature sensor module to the Arduino board using jumper wires. The sensor module has three pins: VCC, GND, and DATA. Connect the VCC pin to the 5V pin on the Arduino board, the GND pin to the GND pin on the board, and the DATA pin to a digital input/output pin on the board (e.g., pin 2).
+## 🚀 How It Works
 
-Step 4: Write the code
-Open the Arduino IDE and write the code to read data from the sensors and send it to the serial monitor "COM6"
+This system continuously collects data from environmental and mechanical sensors connected to the engine and sends it to a machine learning model trained to identify **healthy** and **faulty** engine conditions.
 
-Step 5: Write the Python code to train the Sensor data using Generative AI
-Write the Python code to read sensor data from the serial port "CO63" and use that data to train using Generative AI model to train the sensor data. Need to train using both Good and Bad Engine data to accurately predict the Engine state
+---
 
-Step 6: Write the Python code to predict the Engine State
-Write the Python code to read sensor data from the serial port "COM6" and use that data to predict the Engine State using trained Generative AI model
+## 📌 Step-by-Step Implementation
+
+### 🔌 Step 1: Connect the Sound Sensor
+- **Pins:** VCC → 5V, GND → GND, AOUT → A0 (Analog)
+- Detects ambient noise levels near the engine.
+
+### 🔩 Step 2: Connect the Vibration Sensor
+- **Pins:** VCC → 5V, GND → GND, SIG → A1 (Analog)
+- Measures mechanical vibrations.
+
+### 🌡️ Step 3: Connect the DHT11 Sensor
+- **Pins:** VCC → 5V, GND → GND, DATA → D2 (Digital)
+- Captures temperature and humidity levels.
+
+### 🧠 Step 4: Write Arduino Code
+- Open the **Arduino IDE**.
+- Write code to read from all sensors and transmit data to the **Serial Monitor (COM6)**.
+
+### 🤖 Step 5: Train the Model with Python + Generative AI
+- Use Python to read data from **serial port COM6**.
+- Collect both **Good Engine** and **Bad Engine** sensor data.
+- Train a **Generative AI model** to learn patterns from the data.
+
+### 🔍 Step 6: Predict Engine Health
+- Read real-time data from **COM6** using Python.
+- Pass data to the trained AI model.
+- Output: **Predicted Engine State** (e.g., Normal, Warning, Critical)
+
+---
+
+## 💡 Future Improvements
+- Add real-time dashboard for monitoring.
+- Integrate with cloud for remote access and alerting.
+- Use more advanced sensors for accuracy.
+
+
+
